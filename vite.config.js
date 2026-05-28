@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path'
+import { fileURLToPath } from 'url' // only render
 import glob from 'fast-glob'
+
 // Grab all HTML files inside src (including subfolders)
+const __filename = fileURLToPath(import.meta.url); // only render
+const __dirname = resolve(__filename, '..'); // only render
+
 const htmlFiles = glob.sync('./src/**/*.html')
 
 
