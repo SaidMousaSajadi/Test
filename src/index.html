@@ -9,19 +9,29 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <script>
+	const myBaseUrl = "http://localhost:3001/"; // Change this part to connect subdomain
+	window.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('.dynamic-link').forEach(link => {
+	  const path = link.getAttribute('data-path'); 
+	  link.href = myBaseUrl + path;
+		});
+	});
+  </script>
 
 </head>
 
 <body>
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top" >
-    <div class="container" >
-      <a class="navbar-brand d-inline-flex gap-2 align-items-center lh-1" href="index.html">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background: #0F172B;">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex gap-0 align-items-center lh-0" href="index.html">
           <span class="text-primary">
-              <img src="./assets/images/favicon_io/Logo.png" alt="" style="width: 28px; height: 28px; object-fit: contain;">
+              <img src="./assets/images/favicon_io/logo.png" alt="" style="width: 65px; height: 65px; object-fit: contain;">
           </span>
-          <span class="fw-bold text-primary" style="font-size: 24px">Toranj Gallery</span>
+          <span class="fw-bold text-primary" style="font-size: 18px" href="index.html">Toranj Antique Gallery</span></span>
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,24 +40,26 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a href="#intro" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#markets" class="nav-link">Markets</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="https://github.com/ElaheShahrian/" class="nav-link">About Iran</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Title -->
-  <div class="row text-center" style="margin-top:50px;margin-bottom:1px;">
-        <div class="col-lg-6 mx-auto" style="margin-bottom:1px;">
-          <div class="mb-10" style="margin-top:1px;">
-            <h2 class="fw-bold mt-1 mb-1" >Persian Antique Gallery<span class="text-primary"></span></h2>
-          </div>
-        </div>
-  </div>
+
 
   <!-- Introduction -->
   <section class="py-lg-2 py-8 bg-white position-relative" id="intro">
     <div class="container ">
+      <div class="row text-center" style="margin-top:50px;margin-bottom:1px;">
+            <div class="col-lg-6 mx-auto" style="margin-bottom:1px;">
+              <div class="mb-10" style="margin-top:1px;">
+                <h2 class="fw-bold mt-1 mb-1" ><span class="text-primary"></span>Persian Antique Gallery</h2>
+              </div>
+            </div>
+      </div>
+
+    
       <div class="row align-items-center gy-1" >
         <div class="col-lg-6" >
           <p class="mt-2 mb-0 lead fw-normal" >
@@ -74,325 +86,249 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
   
+  
+
   <!-- Markets -->
-  <section class="py-lg-13 py-8 mt-1" id="markets">
-    <div class="row text-center" style="margin-top:1px;margin-bottom:1px;">
-        <div class="col-lg-6 mx-auto" style="margin-bottom:1px;">
-          <div class="mb-10" style="margin-top:1px;">
-            <h2 class="fw-bold mt-1 mb-1" ><span class="text-primary">Products</span></h2>
-          </div>
-        </div>
-    </div>
+  <section class="py-lg-13 py-8 bg-white mt-1" id="markets">
+    
     <div class="container">
-      
-      <div>
-        <!-- Market Card Start -->
-        <div class="row g-4">
-          <!-- Market Card 1 -->
-          <div class="col-lg-3 col-md-6">
-
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-1.jpg" class="rounded-top-5 card-img-top" alt="market 1">
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Neyshabur</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Firooze koobi</span>
-                </div>
-                
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="http://localhost:3001" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                </div>
-              </div>
-
-            </div>
-            </a>
-          </div>
-          <!-- Market Card 2 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-2.jpg" class="rounded-top-5 card-img-top" alt="market 2">
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Shiraz</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Minakari</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
+      <div class="row text-center" style="margin-top:1px;margin-bottom:1px;">
+          <div class="col-lg-6 mx-auto" style="margin-bottom:1px;">
+            <div class="mb-10" style="margin-top:1px;">
+              <h2 class="fw-bold mt-1 mb-1" ><span class="text-primary">Products</span></h2>
             </div>
           </div>
-          <!-- Market Card 3 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-3.jpg" class="rounded-top-5 card-img-top" alt="market 3">
-              </div>
-              <div class="card-body p-6">
+      </div>
+      <!-- Market Card Start -->
+      <div class="row g-4">
+        <!-- Market Card 1 -->
+        <div class="col-lg-3 col-md-6">
 
-                <h3 class="mb-1 fs-6">
-                  Isfahan</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-3.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Khatam</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-1.jpg" class="rounded-top-5 card-img-top" alt="market 1">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Firoozeh koobi</h3>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+        <a href="#" class="dynamic-link small link-primary" data-path="#Firoozeh"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
               </div>
             </div>
-          </div>
-          <!-- Market Card 4 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-4.jpg" class="rounded-top-5 card-img-top" alt="market 4">
-              </div>
-              <div class="card-body p-6">
 
-                <h3 class="mb-1 fs-6">
-                  Chaharmahal and Bakhtiari</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-4.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Brass</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
+          </div>
+          </a>
+        </div>
+        <!-- Market Card 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-2.jpg" class="rounded-top-5 card-img-top" alt="market 2">
             </div>
-          </div>
-          <!-- Market Card 5 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-5.jpg" class="rounded-top-5 card-img-top" alt="market 5">
-              </div>
-              <div class="card-body p-6">
+            <div class="card-body p-6">
 
-                <h3 class="mb-1 fs-6">
-                  Tabriz</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-5.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Natural leather</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Market Card 6 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-6.jpg" class="rounded-top-5 card-img-top" alt="market 6">
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Sistan and Baluchestan</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-6.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Soozandozi</span>
-                </div>
-                <!-- <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-3">
-                  <div class="text-xs align-items-center d-flex gap-1 lh-1">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-clock">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="12" r="9" />
-                        <polyline points="12 7 12 12 15 15" />
-                      </svg>
-                    </span>
-                    <span>6 weeks</span>
-                  </div>
-                  <div class="text-xs align-items-center d-flex gap-1 lh-1">
-                    <span>
-
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-users">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        <path d="M21 21v-2a4 4 0  0 0 -3 -3.85" />
-                      </svg>
-                    </span>
-                    <span>1.5K</span>
-                  </div>
-                  <div class="text-xs align-items-center d-flex gap-1 lh-1">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-star text-warning">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                          d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.093 -6.26l3.093 6.26l6.9 1l-5 4.867l1.179 6.873z" />
-                      </svg>
-                    </span>
-                    <span>4.7</span>
-                  </div>
-                </div> -->
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <!-- <span class="fs-5 text-dark fw-bold">$69</span> -->
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Market Card 7 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-7.jpg" class="rounded-top-5 card-img-top" alt="market 7">
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Lahijan</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-7.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Hasir-Bafi</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Market Card 8 -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card  shadow-sm h-100 rounded-5 card-lift">
-              <div class="position-relative overflow-hidden">
-                <img src="./assets/images/market-img-8.jpg" class="rounded-top-5 card-img-top" alt="market 8">
-              </div>
-              <div class="card-body p-6">
-
-                <h3 class="mb-1 fs-6">
-                  Kermanshah</h3>
-                <div class="text-xs d-flex gap-2 align-items-center mt-4 mb-8">
-                  <img src="./assets/images/avatar/avatar-8.jpg" alt="" class="avatar avatar-xs rounded-circle">
-                  <span>Rug</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                  <a href="#" class="small link-primary "><span>More</span>
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-arrow-right ms-1">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <line x1="13" y1="18" x2="19" y2="12"></line>
-                        <line x1="13" y1="6" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </a>
-                </div>
+              <h3 class="mb-1 fs-6">Mina Kari</h3>
+              
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Mina"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
+        <!-- Market Card 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-3.jpg" class="rounded-top-5 card-img-top" alt="market 3">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Khatam kari</h3>
+              
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Khatam"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Market Card 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-4.jpg" class="rounded-top-5 card-img-top" alt="market 4">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Brass</h3>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Brass"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Market Card 5 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-5.jpg" class="rounded-top-5 card-img-top" alt="market 5">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Leather</h3>
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Leather"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Market Card 6 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-6.jpg" class="rounded-top-5 card-img-top" alt="market 6">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Needle work (Soozan dozi)</h3>
+              
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Needlework"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Market Card 7 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-7.jpg" class="rounded-top-5 card-img-top" alt="market 7">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Termeh</h3>
+              
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Termeh"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Market Card 8 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card  shadow-sm h-100 rounded-5 card-lift">
+            <div class="position-relative overflow-hidden">
+              <img src="./assets/images/market-img-8.jpg" class="rounded-top-5 card-img-top" alt="market 8">
+            </div>
+            <div class="card-body p-6">
+
+              <h3 class="mb-1 fs-6">Persian Rug</h3>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="dynamic-link small link-primary" data-path="#Rug"><span>More</span></a>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <line x1="13" y1="18" x2="19" y2="12"></line>
+                      <line x1="13" y1="6" x2="19" y2="12"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="pt-lg-13 bg-light py-8" id="mentor">
+
+  <footer class="pt-lg-9 py-9" style="background: #0F172B;" id="about">
     <div class="container">
-      <div class="row gy-8">
-        <div class="col-12">
-          <hr class="text-secondary opacity-100 my-4">
-        </div>
+      <div class="row gy-3.5 pt-lg-0">
         <div class="col-md-4">
-          <div class="">
+          <div class="text-light">
             <a class="d-inline-flex gap-2 align-items-center lh-1" href="index.html">
-              
-              <span class="fw-bold">Toranj Gallery</span>
+              <span class="fs-4 fw-bold">Toranj Antique Gallery</span>
             </a>
-            <p class="mt-4 mb-6">Persian Antique Gallery</p>
+            <p class="mt-6 mb-4">The rich heritage of Persia</p>
             <div class="d-flex flex-column gap-2">
-              <span class="d-flex align-items-center gap-2">
+              <span class="d-flex align-items-center gap-2 mb-2">
                 <span class="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -406,7 +342,7 @@
                 <span>support@Toranjgallery.ca</span>
 
               </span>
-              <span class="d-flex align-items-center gap-2">
+              <span class="d-flex align-items-center gap-2 mb-2">
                 <span class="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -419,7 +355,7 @@
                 </span>
                 <span>+1 (306) 351-0680</span>
               </span>
-              <span class="d-flex align-items-center gap-2">
+              <span class="d-flex align-items-center gap-2 mb-2">
                 <span class="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -430,7 +366,7 @@
                   </svg>
 
                 </span>
-                <span> Regina, Saskatchewan, Canada</span>
+                <span>Regina, Saskatchewan, Canada</span>
               </span>
             </div>
           </div>
@@ -440,29 +376,31 @@
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="">
-                <h4 class="fs-5 mb-4">Product</h4>
+                <h4 class="fs-5 mb-4 text-light">Product</h4>
                 <ul class="list-unstyled lh-lg small">
-                  <li><a href="#markets">Markets</a></li>
+                  <li>
+					<a href="#" class="dynamic-link" data-path="">Markets</a>
+				  </li>
+				  
                 </ul>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div>
-                <h4 class="fs-5 mb-4">Company</h4>
+                <h4 class="fs-5 mb-4 text-light">Company</h4>
                 <ul class="list-unstyled lh-lg small">
-                  <li><a href="#about">About Us</a>
+                  <li><a href="#">About Us</a>
                   </li>
-                  <li><a href="https://elaheshahrian.github.io/Home">Contact us</a>
                   </li>
               </div>
 
             </div>
             <div class="col-lg-3 col-md-6">
               <div>
-                <h4 class="fs-5 mb-4">Support</h4>
+                <h4 class="fs-5 mb-4 text-light">Contact us</h4>
                 <ul class="list-unstyled lh-lg small">
-                  <li><a href="github.com/ElaheShahrian">Web Development</a></li>
-                  <li><a href="https://www.linkedin.com/in/elahe-shahrian">UI/UX Design</a></li>
+                  <li class="mb-3"><a href="https://www.facebook.com/Toranj2023/">Marketing</a></li>
+                  <li class="mb-3"><a href="https://www.linkedin.com/in/elahe-shahrian">Web Development</a></li>
                 </ul>
               </div>
 
@@ -473,6 +411,11 @@
       </div>
     </div>
   </footer>
+    
+
+
+
+  
 
 
   <!-- Modal -->
@@ -531,8 +474,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Navbar End -->
 
 
   <!-- Bootstrap JS -->
