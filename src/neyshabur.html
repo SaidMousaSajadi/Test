@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  
   <script>
 	const myBaseURL = "https://test-i9td.onrender.com/"; // Change this part to connect subdomain
 	window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +19,7 @@
 		});
 	});
   </script>
+  
   <script>
 	const myShopSubURL = "https://testsub-3790.onrender.com/"; // Change this part to connect subdomain
 	window.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +29,6 @@
 		});
 	});
   </script>
-
 
 </head>
 
@@ -60,11 +61,11 @@
 
   <!-- Introduction -->
   <section class="py-lg-2 py-8 bg-white position-relative" id="intro">
-    <div class="container ">
+    <div class="container">
       <div class="row text-center" style="margin-top:50px;margin-bottom:1px;">
         <div class="col-lg-6 mx-auto" style="margin-bottom:1px;">
             <div class="mb-10" style="margin-top:1px;">
-            <h2 class="fw-bold mt-1 mb-1"><span class="text-primary">Neyshaboor</span> city</h2>
+            <h2 class="fw-bold mt-1 mb-1"><span class="text-primary">Neyshabur</span> city</h2>
         </div>
         </div>
       </div>
@@ -77,7 +78,16 @@
       <div class="row align-items-center gy-1" >
         <div class="col-lg-6" >
           <p class="mt-2 mb-0 lead fw-normal" >
-            Toranj Gallery brings the beauty of Iranian art, culture, and craftsmanship to the world. The collection is inspired by the rich heritage of Persia, offering carefully selected handmade and traditional items that reflect elegance, history, and authentic artistry. Through this vision, Toranj Gallery shares the spirit of Iranian culture while creating a bridge between tradition and modern living.
+            Nishapur (Neyshabur), one of the major historical and cultural centers of northeastern Iran, is widely recognized as the birthplace of the great mathematician and poet Omar Khayyam, as well as the hometown of the distinguished painter Kamal-ol-molk. Both figures have made a lasting contribution to Persian intellectual and artistic heritage, and Nishapur itself has long been regarded as a symbol of knowledge, creativity, and artistic excellence in Iranian civilization.
+          </p>
+          <p class="mt-2 mb-0 lead fw-normal" >
+            Beyond its rich literary and visual art legacy, Nishapur is also closely connected to the vibrant traditions of Khorasani dance, a folkloric form of movement that reflects the spirit, emotions, and communal identity of the people of the region. Khorasani dance is a collection of traditional folk dances from the Greater Khorasan region in northeastern Iran. It is typically performed in groups and is deeply rooted in local rituals, celebrations, and rural life. The dance is often accompanied by traditional music, especially the dotar, a two-stringed instrument that creates a distinctive emotional and rhythmic atmosphere.
+          </p>
+          <p class="mt-2 mb-0 lead fw-normal" >
+            The movements are generally simple yet energetic, emphasizing coordinated steps, hand gestures, and sometimes circular or chain formations that symbolize unity and social harmony. Khorasani dance is commonly performed at weddings, seasonal festivals, and community gatherings, and it continues to represent joy, identity, and the cultural spirit of the region.
+          </p>
+          <p class="mt-2 mb-0 lead fw-normal" >
+            In addition to its musical and dance traditions, Nishapur is also connected to Persian decorative arts such as Firoozeh Koobi, a traditional craft in which small pieces of turquoise stone are carefully inlaid onto metal surfaces, typically copper, brass, or silver. This art form creates a striking blue mosaic-like surface and is highly valued for its aesthetic beauty and symbolic connection to protection, spirituality, and Persian artistic identity.
           </p>
           <div style="height: 50px;"></div>
           <a href="" class="fs-4 fw-bold link-primary dynamic-link" data-path="#Firoozeh"><span>To Market</span>
@@ -91,20 +101,43 @@
           </a>
           <div style="height: 50px;"></div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="align-self: flex-start;">
           <div class="card p-3 rounded-5 shadow-sm" style="margin-top:1px;">
             <div class="position-relative">
               <div class="position-relative">
-                <img src="./assets/images/blogs/neyshabur.jpg" alt="about" class="rounded-5 img-fluid" />
-
-                <a href="https://youtu.be/srR1u5fMX4s?si=4AyypVwqiKUIEhYC"
-                  class="play-btn glightbox position-absolute top-50 start-50 translate-middle icon-shape icon-xl rounded-circle text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                <img id="video-thumb" src="./assets/images/blogs/neyshabur.jpg" alt="about" class="rounded-5 img-fluid w-100 h-100" />
+                
+                <a id="play-btn" href="#" class="play-btn position-absolute top-50 start-50 translate-middle icon-shape icon-xl rounded-circle text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
                     class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" />
                   </svg>
                 </a>
+
+                <iframe id="youtube-iframe"
+                        width="100%" height="100%"
+                        src="https://www.youtube.com/embed/0dKf46akQBQ"
+                        data-src="https://www.youtube.com/embed/0dKf46akQBQ?autoplay=1"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        class="video-container rounded-5"
+                        style="display: none;">
+                </iframe>
+
+                <script>
+                  document.getElementById('play-btn').addEventListener('click', function(e) {
+                  e.preventDefault();
+                  
+                  document.getElementById('video-thumb').style.display = 'none';
+                  this.style.display = 'none';
+                  
+                  const iframe = document.getElementById('youtube-iframe');
+                  iframe.src = iframe.getAttribute('data-src'); 
+                  iframe.style.display = 'block';
+                  });
+                </script>
               </div>
             </div>
           </div>
